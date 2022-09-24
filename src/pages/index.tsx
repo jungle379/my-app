@@ -13,6 +13,9 @@ const Home: NextPage = () => {
       <main>
         <div>
           <div className="text-4xl text-red-600">Create Next App</div>
+          <div>
+            <Link href="/">link</Link>
+          </div>
         </div>
       </main>
     </>
