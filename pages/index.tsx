@@ -11,8 +11,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="text-4xl">
-          <div>Create Next App</div>
+        <div>
+          <div className="text-4xl text-red-600">Create Next App</div>
         </div>
       </main>
     </>
