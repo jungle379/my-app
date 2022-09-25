@@ -1,14 +1,14 @@
-import Link from "next/head";
+import Link from "next/link";
 
 const Header = () => {
-  <>
-    <div>header</div>
-    <div>
-      <Link href="/">
-        <a>link</a>
-      </Link>
-    </div>
-  </>;
+  return (
+    <>
+      <div>my-app</div>
+      <div>
+        <Link href="/">link</Link>
+      </div>
+    </>
+  );
 };
 
 export default Header;
