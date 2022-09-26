@@ -3,8 +3,10 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="flex justify-center mb-10">
-        <Link href="/">footer_link</Link>
+      <div className="h-[200px]">
+        <div className="flex justify-center my-20">
+          <Link href="/">footer_link</Link>
+        </div>
       </div>
     </>
   );
