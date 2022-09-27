@@ -1,15 +1,24 @@
+import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { ComponentProps, Dispatch, SetStateAction } from "react";
+import { Data } from "../../types";
 
-type Data = {
-  id: number;
-  label: string;
+type Props = {
+  setData: Dispatch<SetStateAction<Data[]>>;
 };
 
-const Post = () => {
-  const handleSubmit = (e: any) => {
+const Post: NextPage<Props> = ({ setData }) => {
+  const handleSubmit: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
+    const text = e.currentTarget.text.value;
+    setData((prevData) => {
+      const newData = { id: prevData.length + 1, text };
+      return [...prevData, newData];
+    });
+    e.currentTarget.reset();
   };
+
   return (
     <>
       <Head>
@@ -20,7 +29,9 @@ const Post = () => {
           <input
             className="border-4 border-gray-500"
             type="text"
-            name="query"
+            name="text"
+            autoComplete="off"
+            required
           />
           <button className="border-4 border-gray-500">投稿する</button>
         </div>

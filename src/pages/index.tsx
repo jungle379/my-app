@@ -1,19 +1,46 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { Dispatch, SetStateAction } from "react";
+import { Data } from "../types";
 
-const Home: NextPage = () => {
+type Props = {
+  data: Data[];
+  setdata: Dispatch<SetStateAction<Data[]>>;
+};
+
+const Home: NextPage<Props> = ({ data, setdata }) => {
+  const toggleIsDone = (id: Data["id"]) => {
+    setdata((prevData) => {
+      return prevData.map((data) => {
+        if (data.id === id) {
+          return { ...data };
+        }
+        return data;
+      });
+    });
+  };
+
   return (
     <>
       <Head>
         <title>ホーム</title>
       </Head>
-      <div className="text-blue-800 text-4xl">Hello!</div>
+      <h1>投稿一覧</h1>
+      {data.map((data) => {
+        <div key={data.id}>
+          <label>
+            <input
+              onChange={() => toggleIsDone(data.id)}
+              className="w-[1.5rem] h-[1.5rem]"
+            />
+            {data.text}
+          </label>
+        </div>;
+      })}
       <div className="my-20 text-20">
         <Link href="../posts">投稿ページへ</Link>
       </div>
-      <div></div>
-      <div></div>
     </>
   );
 };
