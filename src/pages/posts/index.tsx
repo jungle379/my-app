@@ -13,7 +13,7 @@ const Post: NextPage<Props> = ({ setData }) => {
     e.preventDefault();
     const text = e.currentTarget.text.value;
     setData((prevData) => {
-      const newData = { id: prevData.length + 1, text };
+      const newData = { id: prevData.length + 1, text, isDone: false };
       return [...prevData, newData];
     });
     e.currentTarget.reset();

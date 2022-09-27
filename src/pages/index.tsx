@@ -14,7 +14,7 @@ const Home: NextPage<Props> = ({ data, setdata }) => {
     setdata((prevData) => {
       return prevData.map((data) => {
         if (data.id === id) {
-          return { ...data };
+          return { ...data, isDone: !data.isDone };
         }
         return data;
       });
@@ -27,17 +27,19 @@ const Home: NextPage<Props> = ({ data, setdata }) => {
         <title>ホーム</title>
       </Head>
       <h1>投稿一覧</h1>
-      {data.map((data) => {
+      {data.map((data) => (
         <div key={data.id}>
           <label>
             <input
+              type="checkbox"
+              checked={data.isDone}
               onChange={() => toggleIsDone(data.id)}
               className="w-[1.5rem] h-[1.5rem]"
             />
             {data.text}
           </label>
-        </div>;
-      })}
+        </div>
+      ))}
       <div className="my-20 text-20">
         <Link href="../posts">投稿ページへ</Link>
       </div>

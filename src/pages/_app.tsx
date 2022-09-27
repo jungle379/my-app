@@ -6,12 +6,13 @@ import { Data } from "../types";
 import { Layout } from "../components/Layout";
 
 const DATAS: Data[] = [
-  { id: 1, text: "foo" },
-  { id: 2, text: "bar" },
+  { id: 1, text: "foo", isDone: false },
+  { id: 2, text: "bar", isDone: true },
 ];
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [data, setData] = useState<Data[]>(DATAS);
+
   return (
     <>
       <Layout dataCount={data.length}>
