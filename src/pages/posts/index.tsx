@@ -1,14 +1,13 @@
+import { useAtom } from "jotai";
 import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { ComponentProps, Dispatch, SetStateAction } from "react";
-import { Data } from "../../types";
+import { ComponentProps } from "react";
+import { datasAtom } from "../../state/todo";
 
-type Props = {
-  setData: Dispatch<SetStateAction<Data[]>>;
-};
+const Post: NextPage = () => {
+  const [_, setData] = useAtom(datasAtom);
 
-const Post: NextPage<Props> = ({ setData }) => {
   const handleSubmit: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
     const text = e.currentTarget.text.value;

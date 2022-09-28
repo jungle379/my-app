@@ -1,17 +1,14 @@
+import { useAtom } from "jotai";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { Dispatch, SetStateAction } from "react";
+import { datasAtom } from "../state/todo";
 import { Data } from "../types";
 
-type Props = {
-  data: Data[];
-  setdata: Dispatch<SetStateAction<Data[]>>;
-};
-
-const Home: NextPage<Props> = ({ data, setdata }) => {
+const Home: NextPage = () => {
+  const [data, setData] = useAtom(datasAtom);
   const toggleIsDone = (id: Data["id"]) => {
-    setdata((prevData) => {
+    setData((prevData) => {
       return prevData.map((data) => {
         if (data.id === id) {
           return { ...data, isDone: !data.isDone };
