@@ -2,21 +2,10 @@ import { useAtom } from "jotai";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { datasAtom } from "../state/todo";
-import { Data } from "../types";
+import { toggleDatasAtom } from "../state/todo";
 
 const Home: NextPage = () => {
-  const [data, setData] = useAtom(datasAtom);
-  const toggleIsDone = (id: Data["id"]) => {
-    setData((prevData) => {
-      return prevData.map((data) => {
-        if (data.id === id) {
-          return { ...data, isDone: !data.isDone };
-        }
-        return data;
-      });
-    });
-  };
+  const [data, toggleData] = useAtom(toggleDatasAtom);
 
   return (
     <>
@@ -30,7 +19,7 @@ const Home: NextPage = () => {
             <input
               type="checkbox"
               checked={data.isDone}
-              onChange={() => toggleIsDone(data.id)}
+              onChange={() => toggleData({ id: data.id })}
               className="w-[1.5rem] h-[1.5rem]"
             />
             {data.text}

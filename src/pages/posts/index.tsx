@@ -3,18 +3,15 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { ComponentProps } from "react";
-import { datasAtom } from "../../state/todo";
+import { addDatasAtom } from "../../state/todo";
 
 const Post: NextPage = () => {
-  const [_, setData] = useAtom(datasAtom);
+  const [_, addData] = useAtom(addDatasAtom);
 
   const handleSubmit: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
     const text = e.currentTarget.text.value;
-    setData((prevData) => {
-      const newData = { id: prevData.length + 1, text, isDone: false };
-      return [...prevData, newData];
-    });
+    addData({ text });
     e.currentTarget.reset();
   };
 
@@ -23,7 +20,7 @@ const Post: NextPage = () => {
       <Head>
         <title>投稿ページ</title>
       </Head>
-      <form onSubmit={handleSubmit} autoComplete="off">
+      <form onSubmit={handleSubmit}>
         <div className="flex">
           <input
             className="border-4 border-gray-500"

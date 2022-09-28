@@ -8,6 +8,7 @@ const Header: FC = () => {
       <div className="h-[200px]">
         <div className="text-4xl">my-app</div>
       </div>
+      <DataCounter />
       <Link href="/">一覧</Link>
       <Link href="/posts">追加</Link>
     </>
