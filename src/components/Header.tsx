@@ -8,9 +8,11 @@ const Header: FC = () => {
       <div className="h-[200px]">
         <div className="text-4xl">my-app</div>
       </div>
-      <DataCounter />
-      <Link href="/">一覧</Link>
-      <Link href="/posts">追加</Link>
+      <div className="text-4xl py-20 flex justify-center">
+        <DataCounter />
+      </div>
+      {/* <Link href="/">一覧</Link>
+      <Link href="/posts">追加</Link> */}
     </>
   );
 };
