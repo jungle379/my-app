@@ -27,6 +27,7 @@ const Post: NextPage = () => {
             type="text"
             name="text"
             autoComplete="off"
+            placeholder="タイトルを入力してください"
             required
           />
           <button className="border-4 border-gray-500">投稿する</button>
