@@ -23,7 +23,7 @@ const Post: NextPage = () => {
       <form onSubmit={handleSubmit}>
         <div className="flex">
           <input
-            className="border-4 border-gray-500"
+            className="border-4 border-gray-500 text-black"
             type="text"
             name="text"
             autoComplete="off"
@@ -32,7 +32,7 @@ const Post: NextPage = () => {
           <button className="border-4 border-gray-500">投稿する</button>
         </div>
       </form>
-      <div className="my-20 text-2xl border-2 border-orange-500 w-[80px]">
+      <div className="my-20 mx-10 text-2xl border-2 border-orange-500 w-[80px]">
         <Link href="/">Topへ</Link>
       </div>
     </>
