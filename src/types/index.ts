@@ -1,6 +1,6 @@
 export type Data = {
   id: number;
-  title: string;
+  // title: string;
   text: string;
   isDone: boolean;
 };
