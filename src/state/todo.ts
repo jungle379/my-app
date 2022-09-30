@@ -29,7 +29,7 @@ export const addDatasAtom = atom<null, Pick<Data, "text">>(
     const prevDatas = get(datasAtom);
     const newData = {
       id: prevDatas.length + 1,
-      title: update.text,
+      // title: update.text,
       text: update.text,
       isDone: false,
     };

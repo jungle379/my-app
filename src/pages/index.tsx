@@ -22,8 +22,8 @@ const Home: NextPage = () => {
               onChange={() => toggleData({ id: data.id })}
               className="w-[1.5rem] h-[1.5rem]"
             />
-            {data.title}
-            <br />
+            {/* {data.title}
+            <br /> */}
             {data.text}
           </label>
         </div>
