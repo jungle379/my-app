@@ -24,10 +24,18 @@ const Post: NextPage = () => {
         <div className="flex">
           <input
             className="border-4 border-gray-500 text-black"
+            type="title"
+            name="title"
+            autoComplete="off"
+            placeholder="タイトルを入力してください"
+            required
+          />
+          <input
+            className="border-4 border-gray-500 text-black"
             type="text"
             name="text"
             autoComplete="off"
-            placeholder="タイトルを入力してください"
+            placeholder="内容を入力してください"
             required
           />
           <button className="border-4 border-gray-500">投稿する</button>
