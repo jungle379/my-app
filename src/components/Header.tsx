@@ -11,10 +11,6 @@ const Header: FC = () => {
       <div className="text-4xl py-10 flex justify-center">
         <DataCounter />
       </div>
-      {/* <div>
-      <Link href="/">一覧</Link>
-      <Link href="/posts">追加</Link>
-      </div> */}
     </>
   );
 };
