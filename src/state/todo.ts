@@ -5,6 +5,7 @@ import { selectAtom } from "jotai/utils";
 export const datasAtom = atom<Data[]>([
   { id: 1, text: "foo", isDone: false },
   { id: 2, text: "bar", isDone: false },
+  { id: 3, text: "baz", isDone: false },
 ]);
 
 export const datasLengthAtom = selectAtom(datasAtom, (datas) => datas.length);
