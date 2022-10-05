@@ -23,14 +23,6 @@ const Post: NextPage = () => {
       <form onSubmit={handleSubmit}>
         <div className="flex">
           <input
-            className="w-[300px] mx-10 border-4 border-gray-500 text-black"
-            type="title"
-            name="title"
-            autoComplete="off"
-            placeholder="タイトルを入力してください"
-            required
-          />
-          <input
             className="border-4 mx-10 border-gray-500 text-black"
             type="text"
             name="text"
