@@ -25,6 +25,14 @@ const Post: NextPage = () => {
           <input
             className="border-4 mx-10 border-gray-500 text-black"
             type="text"
+            name="title"
+            autoComplete="off"
+            placeholder="タイトルを入力してください"
+            required
+          />
+          <input
+            className="border-4 mx-10 border-gray-500 text-black"
+            type="text"
             name="text"
             autoComplete="off"
             placeholder="内容を入力してください"
