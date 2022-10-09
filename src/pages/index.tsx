@@ -28,8 +28,10 @@ const Home: NextPage = () => {
           </label>
         </div>
       ))}
-      <div className="my-20 text-20 text-center hover:underline w-[150px] border-2 border-orange-500">
-        <Link href="../posts">投稿ページへ</Link>
+      <div className="flex justify-center">
+        <div className="my-20 text-20 text-center hover:underline w-[150px] border-2 border-orange-500">
+          <Link href="../posts">投稿ページへ</Link>
+        </div>
       </div>
     </>
   );
