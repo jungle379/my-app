@@ -10,9 +10,11 @@ const Post: NextPage = () => {
 
   const handleSubmit: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
+    const title = e.currentTarget.text.value;
     const text = e.currentTarget.text.value;
-    addData({ text });
+    addData({ text, title });
     e.currentTarget.reset();
+    // console.log(title);
   };
 
   return (
@@ -38,11 +40,15 @@ const Post: NextPage = () => {
             placeholder="内容を入力してください"
             required
           />
-          <button className="border-4 border-gray-500">投稿する</button>
+          <button className="border-4 border-gray-500 w-[100px]">
+            投稿する
+          </button>
         </div>
       </form>
-      <div className="my-20 mx-10 text-2xl border-2 border-orange-500 w-[80px]">
-        <Link href="/">Topへ</Link>
+      <div className="flex justify-center">
+        <div className="my-10 mx-10 text-2xl border-2 border-orange-500 w-[120px] text-center">
+          <Link href="/">Topへ</Link>
+        </div>
       </div>
     </>
   );
