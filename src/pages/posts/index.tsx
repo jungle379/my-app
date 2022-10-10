@@ -14,7 +14,6 @@ const Post: NextPage = () => {
     const text = e.currentTarget.text.value;
     addData({ text, title });
     e.currentTarget.reset();
-    // console.log(title);
   };
 
   return (
