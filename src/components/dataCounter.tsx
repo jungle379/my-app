@@ -4,5 +4,5 @@ import { datasLengthAtom } from "../state/todo";
 
 export const DataCounter: FC = () => {
   const [datasLength] = useAtom(datasLengthAtom);
-  return <h2>投稿Data: {datasLength}件</h2>;
+  return <h2>投稿: {datasLength}件</h2>;
 };
