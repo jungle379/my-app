@@ -24,7 +24,7 @@ const Home: NextPage = () => {
             />
             {data.title}
             <br />
-            {data.text}
+            <Link href="/">{data.text}</Link>
           </label>
         </div>
       ))}
