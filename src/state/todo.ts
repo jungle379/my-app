@@ -3,7 +3,7 @@ import { Data } from "../types";
 import { selectAtom } from "jotai/utils";
 
 export const datasAtom = atom<Data[]>([
-  { id: 1, title: "1st", text: "foo", isDone: true },
+  { id: 1, title: "1st", text: "foo", isDone: false },
   { id: 2, title: "2nd", text: "bar", isDone: false },
 ]);
 
