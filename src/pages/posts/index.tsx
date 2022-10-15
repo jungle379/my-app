@@ -23,9 +23,9 @@ const Post: NextPage = () => {
         <title>投稿ページ</title>
       </Head>
       <form onSubmit={handleSubmit}>
-        <div className="flex">
+        <div className="flex justify-between">
           <input
-            className="border-4 mx-10 border-gray-500 text-black"
+            className="border-4 border-gray-500 text-black"
             type="text"
             name="title"
             autoComplete="off"
