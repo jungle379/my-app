@@ -12,9 +12,9 @@ const Post: NextPage = () => {
     e.preventDefault();
     const title = e.currentTarget.text.value;
     const text = e.currentTarget.text.value;
-    addData({ text, title });
+    addData({ title, text });
     e.currentTarget.reset();
-    console.log(title);
+    console.log(title, text);
   };
 
   return (
