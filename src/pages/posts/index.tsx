@@ -11,9 +11,10 @@ const Post: NextPage = () => {
   const handleSubmit: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
     const text = e.currentTarget.text.value;
+    const title = e.currentTarget.foo.value;
     addData({
       text,
-      title: "",
+      title,
     });
     e.currentTarget.reset();
   };
@@ -28,7 +29,7 @@ const Post: NextPage = () => {
           <input
             className="border-4 mx-10 border-gray-500 text-black"
             type="text"
-            name="title"
+            name="foo"
             autoComplete="off"
             placeholder="タイトルを入力してください"
             required
