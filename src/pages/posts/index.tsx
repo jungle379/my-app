@@ -10,11 +10,12 @@ const Post: NextPage = () => {
 
   const handleSubmit: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
-    const title = e.currentTarget.text.value;
     const text = e.currentTarget.text.value;
-    addData({ title, text });
+    addData({
+      text,
+      title: "",
+    });
     e.currentTarget.reset();
-    console.log(title, text);
   };
 
   return (
@@ -23,9 +24,9 @@ const Post: NextPage = () => {
         <title>投稿ページ</title>
       </Head>
       <form onSubmit={handleSubmit}>
-        <div className="flex justify-between">
+        <div className="flex justify-center">
           <input
-            className="border-4 border-gray-500 text-black"
+            className="border-4 mx-10 border-gray-500 text-black"
             type="text"
             name="title"
             autoComplete="off"

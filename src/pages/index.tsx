@@ -12,24 +12,26 @@ const Home: NextPage = () => {
       <Head>
         <title>ホーム</title>
       </Head>
-      <h1>投稿一覧</h1>
-      {data.map((data) => (
-        <div key={data.id}>
-          <label>
-            <input
-              type="checkbox"
-              checked={data.isDone}
-              onChange={() => toggleData({ id: data.id })}
-              className="w-[1.5rem] h-[1.5rem]"
-            />
-            {data.title}
-            <br />
-            <Link href="/">{data.text}</Link>
-          </label>
+      <div className="flex justify-between">
+        <div>
+          <h1>投稿一覧</h1>
+          {data.map((data) => (
+            <div key={data.id}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={data.isDone}
+                  onChange={() => toggleData({ id: data.id })}
+                  className="w-[1.5rem] h-[1.5rem]"
+                />
+                {data.title}
+                <br />
+                <Link href="/">{data.text}</Link>
+              </label>
+            </div>
+          ))}
         </div>
-      ))}
-      <div className="flex justify-center">
-        <div className="my-20 text-20 text-center hover:underline w-[150px] border-2 border-orange-500">
+        <div className="mx-10 my-10 text-20 text-center hover:underline w-[150px] h-[40px] border-2 border-orange-500">
           <Link href="../posts">投稿ページへ</Link>
         </div>
       </div>
