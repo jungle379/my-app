@@ -24,7 +24,9 @@ const Home: NextPage = () => {
                   onChange={() => toggleData({ id: data.id })}
                   className="w-[1.5rem] h-[1.5rem]"
                 />
-                {data.title}
+                <Link href={`/post/${encodeURIComponent(data.text)}`}>
+                  {data.title}
+                </Link>
                 <br />
                 <Link href="/">{data.text}</Link>
                 <br />
