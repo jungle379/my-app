@@ -27,6 +27,8 @@ const Home: NextPage = () => {
                 {data.title}
                 <br />
                 <Link href="/">{data.text}</Link>
+                <br />
+                {data.date}
               </label>
             </div>
           ))}

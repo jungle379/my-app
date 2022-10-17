@@ -3,4 +3,5 @@ export type Data = {
   title: string;
   text: string;
   isDone: boolean;
+  date: number;
 };

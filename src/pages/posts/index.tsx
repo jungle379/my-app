@@ -12,9 +12,11 @@ const Post: NextPage = () => {
     e.preventDefault();
     const text = e.currentTarget.text.value;
     const title = e.currentTarget.foo.value;
+    const date = e.currentTarget.date.value;
     addData({
       text,
       title,
+      date,
     });
     e.currentTarget.reset();
   };
@@ -27,7 +29,7 @@ const Post: NextPage = () => {
       <form onSubmit={handleSubmit}>
         <div className="flex justify-center">
           <input
-            className="border-4 mx-10 border-gray-500 text-black"
+            className="border-4 mx-5 h-[80px] border-gray-500 text-black"
             type="text"
             name="foo"
             autoComplete="off"
@@ -35,11 +37,18 @@ const Post: NextPage = () => {
             required
           />
           <input
-            className="border-4 mx-10 border-gray-500 text-black"
+            className="border-4 mx-5 h-[80px] border-gray-500 text-black"
             type="text"
             name="text"
             autoComplete="off"
             placeholder="内容を入力してください"
+            required
+          />
+          <input
+            className="border-4 mx-5 h-[80px] border-gray-500 text-black"
+            type="date"
+            name="date"
+            id="today"
             required
           />
           <button className="border-4 border-gray-500 w-[100px]">

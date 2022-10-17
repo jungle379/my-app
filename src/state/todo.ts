@@ -3,8 +3,8 @@ import { Data } from "../types";
 import { selectAtom } from "jotai/utils";
 
 export const datasAtom = atom<Data[]>([
-  { id: 1, title: "1st", text: "foo", isDone: false },
-  { id: 2, title: "2nd", text: "bar", isDone: false },
+  { id: 1, title: "1st", text: "foo", isDone: false, date: 20220101 },
+  { id: 2, title: "2nd", text: "bar", isDone: false, date: 20220102 },
 ]);
 
 export const datasLengthAtom = selectAtom(datasAtom, (datas) => datas.length);
@@ -23,7 +23,7 @@ export const toggleDatasAtom = atom<Data[], Pick<Data, "id">>(
   }
 );
 
-export const addDatasAtom = atom<null, Pick<Data, "text" | "title">>(
+export const addDatasAtom = atom<null, Pick<Data, "text" | "title" | "date">>(
   null,
   (get, set, update) => {
     const prevDatas = get(datasAtom);
@@ -32,6 +32,7 @@ export const addDatasAtom = atom<null, Pick<Data, "text" | "title">>(
       title: update.title,
       text: update.text,
       isDone: false,
+      date: update.date,
     };
     const newDatas = [...prevDatas, newData];
     set(datasAtom, newDatas);
