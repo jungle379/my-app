@@ -30,7 +30,7 @@ const Home: NextPage = () => {
                 <br />
                 {data.text}
                 <br />
-                {data.date}
+                {data.day}
               </label>
             </div>
           ))}

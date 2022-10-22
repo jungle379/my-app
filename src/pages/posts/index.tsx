@@ -12,11 +12,11 @@ const Post: NextPage = () => {
     e.preventDefault();
     const text = e.currentTarget.text.value;
     const title = e.currentTarget.foo.value;
-    const date = e.currentTarget.date.value;
+    const day = e.currentTarget.day.value;
     addData({
       text,
       title,
-      date,
+      day,
     });
     e.currentTarget.reset();
   };
@@ -47,7 +47,7 @@ const Post: NextPage = () => {
           <input
             className="border-4 mx-5 h-[80px] border-gray-500 text-black"
             type="date"
-            name="date"
+            name="day"
             id="today"
             required
           />
