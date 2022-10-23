@@ -27,8 +27,6 @@ const Home: NextPage = () => {
                 <Link href={`/posts/${encodeURIComponent(data.id)}`}>
                   {data.titles}
                 </Link>
-                <br />
-                {data.day}
               </label>
             </div>
           ))}
