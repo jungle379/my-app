@@ -6,6 +6,7 @@ import { datasAtom } from "../../state/todo";
 
 const Id: NextPage = () => {
   const [data] = useAtom(datasAtom);
+
   return (
     <>
       <Head>
@@ -17,7 +18,7 @@ const Id: NextPage = () => {
             <label>
               {data.text}
               <br />
-              投稿日時：{data.day}
+              {data.day === "" ? "" : <div>投稿日時：{data.day}</div>}
             </label>
           </div>
         ))}
