@@ -29,7 +29,7 @@ const Post: NextPage = () => {
       <form onSubmit={handleSubmit}>
         <div className="flex justify-center">
           <input
-            className="border-4 mx-5 h-[80px] border-gray-500 text-black"
+            className="border-4 mx-5 h-[60px] border-gray-500 text-black"
             type="text"
             name="foo"
             autoComplete="off"
@@ -37,7 +37,7 @@ const Post: NextPage = () => {
             required
           />
           <input
-            className="border-4 mx-5 h-[80px] border-gray-500 text-black"
+            className="border-4 mx-5 h-[60px] border-gray-500 text-black"
             type="text"
             name="text"
             autoComplete="off"
@@ -45,7 +45,7 @@ const Post: NextPage = () => {
             required
           />
           <input
-            className="border-4 mx-5 h-[80px] border-gray-500 text-black"
+            className="border-4 mx-5 h-[60px] border-gray-500 text-black"
             type="date"
             name="day"
             id="today"
