@@ -10,7 +10,7 @@ const Id: NextPage = () => {
   return (
     <>
       <Head>
-        <title>投稿コメント一覧</title>
+        <title>コメント一覧</title>
       </Head>
       <div>
         {data.map((data) => (
