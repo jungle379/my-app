@@ -12,11 +12,12 @@ const Id: NextPage = () => {
       <Head>
         <title>コメント一覧</title>
       </Head>
+      <h1>コメント一覧</h1>
       <div>
         {data.map((data) => (
           <div key={data.id}>
             <label>
-              {data.id === 0 ? "" : <div>{data.text}</div>}
+              {data.id === 0 ? "" : <div>・{data.text}</div>}
               {data.day === "" ? "" : <div>投稿日時：{data.day}</div>}
             </label>
           </div>
