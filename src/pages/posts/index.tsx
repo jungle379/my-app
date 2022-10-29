@@ -26,6 +26,7 @@ const Post: NextPage = () => {
       <Head>
         <title>投稿ページ</title>
       </Head>
+      <h1>投稿フォーム</h1>
       <form onSubmit={handleSubmit}>
         <div className="flex justify-center">
           <input
