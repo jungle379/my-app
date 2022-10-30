@@ -25,7 +25,7 @@ const Home: NextPage = () => {
                   className="w-[1.5rem] h-[1.5rem]"
                 />
                 <Link href={`/posts/${encodeURIComponent(data.id)}`}>
-                  {data.titles}
+                  {data.title}
                 </Link>
               </label>
             </div>

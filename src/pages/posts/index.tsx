@@ -11,11 +11,11 @@ const Post: NextPage = () => {
   const handleSubmit: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
     const text = e.currentTarget.text.value;
-    const titles = e.currentTarget.foo.value;
+    const title = e.currentTarget.foo.value;
     const day = e.currentTarget.day.value;
     addData({
       text,
-      titles,
+      title,
       day,
     });
     e.currentTarget.reset();
