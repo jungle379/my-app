@@ -50,7 +50,6 @@ const Post: NextPage = () => {
             type="date"
             name="day"
             id="today"
-            required
           />
           <button className="border-4 border-gray-500 w-[100px]">
             投稿する
