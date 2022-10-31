@@ -12,7 +12,7 @@ const Id: NextPage = () => {
       <Head>
         <title>コメント一覧</title>
       </Head>
-      <h1>コメント一覧</h1>
+      <div>コメント一覧</div>
       <div>
         {data.map((data) => (
           <div key={data.id}>
