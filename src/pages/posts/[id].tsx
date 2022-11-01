@@ -2,22 +2,27 @@ import { useAtom } from "jotai";
 import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { datasAtom } from "../../state/todo";
 
 const Id: NextPage = () => {
   const [data] = useAtom(datasAtom);
-
+  const router = useRouter();
   return (
     <>
       <Head>
         <title>コメント一覧</title>
       </Head>
-      <div>コメント一覧</div>
+      <h1>コメント一覧</h1>
       <div>
         {data.map((data) => (
           <div key={data.id}>
             <label>
-              {data.id === 0 ? "" : <div>・{data.text}</div>}
+              {`/posts/${data.id}` === router.asPath ? (
+                <div>・{data.text}</div>
+              ) : (
+                ""
+              )}
               {data.day === "" ? "" : <div>投稿日時：{data.day}</div>}
             </label>
           </div>
