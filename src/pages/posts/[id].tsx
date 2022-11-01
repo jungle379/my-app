@@ -11,9 +11,11 @@ const Id: NextPage = () => {
   return (
     <>
       <Head>
-        <title>コメント一覧</title>
+        <title>投稿コメント</title>
       </Head>
-      <h1>コメント一覧</h1>
+      <div>
+        <h1>投稿コメント</h1>
+      </div>
       <div>
         {data.map((data) => (
           <div key={data.id}>
@@ -24,7 +26,11 @@ const Id: NextPage = () => {
                 ""
               )}
               <br />
-              {data.day === "" ? "" : <div>・投稿日時：{data.day}</div>}
+              {`/posts/${data.id}` === router.asPath && !(data.day === "") ? (
+                <div>・投稿日時：{data.day}</div>
+              ) : (
+                ""
+              )}
             </label>
           </div>
         ))}
