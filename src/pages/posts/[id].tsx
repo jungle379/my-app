@@ -35,7 +35,7 @@ const Id: NextPage = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-evenly border-y-2 mt-10">
+      <div className="flex justify-evenly border-t-2 mt-10">
         <div className="my-10 mx-10 text-2xl border-2 border-orange-500 w-[120px] text-center">
           <Link href="/">ホームへ</Link>
         </div>
