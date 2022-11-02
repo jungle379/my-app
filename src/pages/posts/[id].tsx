@@ -27,7 +27,7 @@ const Id: NextPage = () => {
               )}
               <br />
               {`/posts/${data.id}` === router.asPath && !(data.day === "") ? (
-                <div>・投稿日時：{data.day}</div>
+                <div className="font-bold">・投稿日時：{data.day}</div>
               ) : (
                 ""
               )}
