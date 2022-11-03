@@ -3,8 +3,8 @@ import { Data } from "../types";
 import { selectAtom } from "jotai/utils";
 
 export const datasAtom = atom<Data[]>([
-  { id: 1, title: "sample1", text: "foo", isDone: false, day: "" },
-  { id: 2, title: "sample2", text: "bar", isDone: false, day: "" },
+  { id: 1, title: "sample1", text: "foo", isDone: false, day: "", url: "" },
+  { id: 2, title: "sample2", text: "bar", isDone: false, day: "", url: "" },
 ]);
 
 export const datasLengthAtom = selectAtom(datasAtom, (datas) => datas.length);
@@ -23,18 +23,19 @@ export const toggleDatasAtom = atom<Data[], Pick<Data, "id">>(
   }
 );
 
-export const addDatasAtom = atom<null, Pick<Data, "text" | "title" | "day">>(
+export const addDatasAtom = atom<
   null,
-  (get, set, update) => {
-    const prevDatas = get(datasAtom);
-    const newData = {
-      id: prevDatas.length + 1,
-      title: update.title,
-      text: update.text,
-      isDone: false,
-      day: update.day,
-    };
-    const newDatas = [...prevDatas, newData];
-    set(datasAtom, newDatas);
-  }
-);
+  Pick<Data, "text" | "title" | "day" | "url">
+>(null, (get, set, update) => {
+  const prevDatas = get(datasAtom);
+  const newData = {
+    id: prevDatas.length + 1,
+    title: update.title,
+    text: update.text,
+    url: update.url,
+    isDone: false,
+    day: update.day,
+  };
+  const newDatas = [...prevDatas, newData];
+  set(datasAtom, newDatas);
+});

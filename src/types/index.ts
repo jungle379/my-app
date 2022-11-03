@@ -4,4 +4,5 @@ export type Data = {
   text: string;
   isDone: boolean;
   day: number | string;
+  url: string;
 };

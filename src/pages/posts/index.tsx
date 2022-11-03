@@ -7,16 +7,19 @@ import { addDatasAtom } from "../../state/todo";
 
 const Post: NextPage = () => {
   const [_, addData] = useAtom(addDatasAtom);
+  console.log(addData);
 
   const handleSubmit: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
     const text = e.currentTarget.text.value;
     const title = e.currentTarget.foo.value;
     const day = e.currentTarget.day.value;
+    const url = e.currentTarget.url.value;
     addData({
       text,
       title,
       day,
+      url,
     });
     e.currentTarget.reset();
   };
@@ -44,6 +47,15 @@ const Post: NextPage = () => {
             autoComplete="off"
             placeholder="内容を入力して下さい"
             required
+          />
+        </div>
+        <div className="flex justify-center my-10">
+          <input
+            className="border-4 mx-5 h-[60px] border-gray-500 text-black"
+            type="url"
+            name="url"
+            autoComplete="off"
+            placeholder="店のURLを入力して下さい"
           />
           <input
             className="border-4 mx-5 h-[60px] border-gray-500 text-black"
