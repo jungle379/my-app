@@ -31,21 +31,29 @@ const Post: NextPage = () => {
       </Head>
       <h1>投稿フォーム</h1>
       <form onSubmit={handleSubmit}>
-        <div className="flex justify-center">
+        <div className="flex justify-between my-10">
           <input
             className="border-4 mx-5 h-[60px] border-gray-500 text-black w-1/2"
             type="text"
             name="foo"
             autoComplete="off"
-            placeholder="店名を入力して下さい"
+            placeholder="店名を入力して下さい　※必須"
             required
           />
           <input
-            className="border-4 mx-5 h-[60px] border-gray-500 text-black w-1/2"
+            className="border-4 mx-5 h-[60px] border-gray-500 text-black"
+            type="date"
+            name="day"
+            id="today"
+          />
+        </div>
+        <div>
+          <input
+            className="border-4 mx-5 h-[200px] border-gray-500 text-black w-1/2"
             type="text"
             name="text"
             autoComplete="off"
-            placeholder="内容を入力して下さい"
+            placeholder="内容を入力して下さい　※必須"
             required
           />
         </div>
@@ -56,12 +64,6 @@ const Post: NextPage = () => {
             name="url"
             autoComplete="off"
             placeholder="店のURLを入力して下さい"
-          />
-          <input
-            className="border-4 mx-5 h-[60px] border-gray-500 text-black"
-            type="date"
-            name="day"
-            id="today"
           />
           <button className="border-4 border-gray-500 w-[100px]">
             投稿する
