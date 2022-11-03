@@ -33,7 +33,7 @@ const Post: NextPage = () => {
       <form onSubmit={handleSubmit}>
         <div className="flex justify-center">
           <input
-            className="border-4 mx-5 h-[60px] border-gray-500 text-black"
+            className="border-4 mx-5 h-[60px] border-gray-500 text-black w-1/2"
             type="text"
             name="foo"
             autoComplete="off"
@@ -41,7 +41,7 @@ const Post: NextPage = () => {
             required
           />
           <input
-            className="border-4 mx-5 h-[60px] border-gray-500 text-black"
+            className="border-4 mx-5 h-[60px] border-gray-500 text-black w-1/2"
             type="text"
             name="text"
             autoComplete="off"
@@ -49,9 +49,9 @@ const Post: NextPage = () => {
             required
           />
         </div>
-        <div className="flex justify-center my-10">
+        <div className="flex justify-between my-10">
           <input
-            className="border-4 mx-5 h-[60px] border-gray-500 text-black"
+            className="border-4 mx-5 h-[60px] border-gray-500 text-black w-1/2"
             type="url"
             name="url"
             autoComplete="off"
