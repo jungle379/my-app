@@ -28,7 +28,14 @@ const Post: NextPage = () => {
       <Head>
         <title>投稿ページ</title>
       </Head>
-      <h1>投稿フォーム</h1>
+      <div className="flex justify-between">
+        <div>
+          <h1>投稿フォーム</h1>
+        </div>
+        <div className="my-10 mx-10 text-2xl border-2 border-orange-500 w-[120px] text-center">
+          <Link href="/">ホームへ</Link>
+        </div>
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="flex justify-between my-10">
           <input
@@ -69,11 +76,6 @@ const Post: NextPage = () => {
           </button>
         </div>
       </form>
-      <div className="flex justify-center">
-        <div className="my-10 mx-10 text-2xl border-2 border-orange-500 w-[120px] text-center">
-          <Link href="/">ホームへ</Link>
-        </div>
-      </div>
     </>
   );
 };
