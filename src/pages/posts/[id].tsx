@@ -32,7 +32,9 @@ const Id: NextPage = () => {
               )}
               {`/posts/${data.id}` === router.asPath && !(data.url === "") ? (
                 <div className="font-bold">
-                  <Link href={data.url}>{data.title}</Link>
+                  <a href={data.url} target="_blank" rel="noopener noreferrer">
+                    {data.title}
+                  </a>
                 </div>
               ) : (
                 ""
