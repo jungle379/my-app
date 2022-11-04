@@ -55,7 +55,7 @@ const Post: NextPage = () => {
         </div>
         <div>
           <input
-            className="border-4 mx-5 h-[200px] border-gray-500 text-black w-1/2"
+            className="border-4 mx-5 h-[200px] border-gray-500 text-black w-1/2 whitespace-normal"
             type="text"
             name="text"
             autoComplete="off"
