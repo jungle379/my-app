@@ -11,10 +11,10 @@ const Id: NextPage = () => {
   return (
     <>
       <Head>
-        <title>投稿コメント</title>
+        <title>投稿内容</title>
       </Head>
       <div>
-        <h1>投稿コメント</h1>
+        <h1>投稿内容</h1>
       </div>
       <div>
         {data.map((data) => (
@@ -33,7 +33,7 @@ const Id: NextPage = () => {
               {`/posts/${data.id}` === router.asPath && !(data.url === "") ? (
                 <div className="font-bold">
                   <a href={data.url} target="_blank" rel="noopener noreferrer">
-                    {data.title}
+                    ・外部URL：{data.title}
                   </a>
                 </div>
               ) : (
