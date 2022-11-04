@@ -26,14 +26,14 @@ const Id: NextPage = () => {
                 ""
               )}
               {`/posts/${data.id}` === router.asPath && !(data.day === "") ? (
-                <div className="font-bold">・投稿日時：{data.day}</div>
+                <div className="font-bold">・投稿日時:{data.day}</div>
               ) : (
                 ""
               )}
               {`/posts/${data.id}` === router.asPath && !(data.url === "") ? (
                 <div className="font-bold">
                   <a href={data.url} target="_blank" rel="noopener noreferrer">
-                    ・外部URL：{data.title}
+                    ・外部URL:{data.title}
                   </a>
                 </div>
               ) : (

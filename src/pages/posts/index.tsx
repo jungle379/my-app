@@ -7,7 +7,6 @@ import { addDatasAtom } from "../../state/todo";
 
 const Post: NextPage = () => {
   const [_, addData] = useAtom(addDatasAtom);
-  console.log(addData);
 
   const handleSubmit: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
