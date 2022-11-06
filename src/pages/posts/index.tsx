@@ -43,7 +43,7 @@ const Post: NextPage = () => {
             type="text"
             name="foo"
             autoComplete="off"
-            placeholder="店名を入力して下さい　※必須"
+            placeholder="店名を入力して下さい  ※必須"
             required
           />
           <input
@@ -59,7 +59,7 @@ const Post: NextPage = () => {
             type="text"
             name="text"
             autoComplete="off"
-            placeholder="内容を入力して下さい　※必須"
+            placeholder="内容を入力して下さい  ※必須"
             required
           />
         </div>

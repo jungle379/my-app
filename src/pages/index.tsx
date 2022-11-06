@@ -14,7 +14,9 @@ const Home: NextPage = () => {
       </Head>
       <div className="flex justify-between">
         <div>
-          <h1>投稿一覧</h1>
+          <div>
+            <h1>投稿一覧</h1>
+          </div>
           {data.map((data) => (
             <div key={data.id}>
               <label>
