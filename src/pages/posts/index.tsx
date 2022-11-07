@@ -69,7 +69,7 @@ const Post: NextPage = () => {
             type="url"
             name="url"
             autoComplete="off"
-            placeholder="店のURLを入力して下さい"
+            placeholder="お店のURLを入力して下さい"
           />
           <button className="border-4 border-gray-500 w-[200px]">
             投稿する
