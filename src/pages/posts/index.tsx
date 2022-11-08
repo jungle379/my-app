@@ -66,7 +66,7 @@ const Post: NextPage = () => {
         <div className="flex justify-between my-10">
           <input
             className="border-4 mx-5 h-[60px] border-gray-500 text-black w-1/2"
-            type="url"
+            type="text"
             name="url"
             autoComplete="off"
             placeholder="お店のURLを入力して下さい"
