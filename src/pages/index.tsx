@@ -33,8 +33,15 @@ const Home: NextPage = () => {
             </div>
           ))}
         </div>
-        <div className="mx-10 my-10 text-20 text-center hover:underline w-[150px] h-[40px] border-2 border-orange-500">
-          <Link href="../posts">投稿ページへ</Link>
+        <div className="mx-10 my-10 text-20 text-center w-[150px] h-[40px] border-2 border-orange-500">
+          <div className="hover:underline">
+            <Link href="../posts">投稿ページへ</Link>
+          </div>
+          <div className="mt-40">
+            <button className="border-4 border-gray-500 w-[200px] h-[50px]">
+              削除する
+            </button>
+          </div>
         </div>
       </div>
     </>
