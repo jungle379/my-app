@@ -37,11 +37,11 @@ const Home: NextPage = () => {
           <div className="hover:underline">
             <Link href="../posts">投稿ページへ</Link>
           </div>
-          <div className="mt-40">
+          {/* <div className="mt-40">
             <button className="border-4 border-gray-500 w-[200px] h-[50px]">
               削除する
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
