@@ -36,46 +36,48 @@ const Post: NextPage = () => {
           <Link href="/">ホームへ</Link>
         </div>
       </div>
-      <form onSubmit={handleSubmit}>
-        <div className="flex justify-between my-10">
-          <input
-            className="border-4 mx-5 h-[60px] border-gray-500 text-black w-1/2"
-            type="text"
-            name="foo"
-            autoComplete="off"
-            placeholder="店名を入力して下さい  ※必須"
-            required
-          />
-          <input
-            className="border-4 mx-5 h-[60px] border-gray-500 text-black"
-            type="date"
-            name="day"
-            id="today"
-          />
-        </div>
-        <div>
-          <input
-            className="border-4 mx-5 h-[200px] border-gray-500 text-black w-1/2 whitespace-normal"
-            type="text"
-            name="text"
-            autoComplete="off"
-            placeholder="内容を入力して下さい  ※必須"
-            required
-          />
-        </div>
-        <div className="flex justify-between my-10">
-          <input
-            className="border-4 mx-5 h-[60px] border-gray-500 text-black w-1/2"
-            type="text"
-            name="url"
-            autoComplete="off"
-            placeholder="お店のURLを入力して下さい"
-          />
-          <button className="border-4 border-gray-500 w-[200px]">
-            投稿する
-          </button>
-        </div>
-      </form>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <div className="flex justify-between my-10">
+            <input
+              className="border-4 mx-5 h-[60px] border-gray-500 text-black w-1/2"
+              type="text"
+              name="foo"
+              autoComplete="off"
+              placeholder="店名を入力して下さい  ※必須"
+              required
+            />
+            <input
+              className="border-4 mx-5 h-[60px] border-gray-500 text-black"
+              type="date"
+              name="day"
+              id="today"
+            />
+          </div>
+          <div>
+            <input
+              className="border-4 mx-5 h-[200px] border-gray-500 text-black w-1/2 whitespace-normal"
+              type="text"
+              name="text"
+              autoComplete="off"
+              placeholder="内容を入力して下さい  ※必須"
+              required
+            />
+          </div>
+          <div className="flex justify-between my-10">
+            <input
+              className="border-4 mx-5 h-[60px] border-gray-500 text-black w-1/2"
+              type="text"
+              name="url"
+              autoComplete="off"
+              placeholder="お店のURLを入力して下さい"
+            />
+            <button className="border-4 border-gray-500 w-[200px]">
+              投稿する
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   );
 };
