@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>ホーム</title>
+        <title>ホームページ</title>
       </Head>
       <div className="flex justify-between">
         <div>
