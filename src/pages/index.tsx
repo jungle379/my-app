@@ -6,7 +6,9 @@ import { toggleDatasAtom } from "../state/todo";
 
 const Home: NextPage = () => {
   const [data, toggleData] = useAtom(toggleDatasAtom);
-
+  const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
+    console.log(e);
+  };
   return (
     <>
       <Head>
@@ -38,7 +40,10 @@ const Home: NextPage = () => {
             <Link href="../posts">投稿ページへ</Link>
           </div>
           <div className="mt-40">
-            <button className="border-4 border-gray-500 w-[200px] h-[50px]">
+            <button
+              onClick={clickHandler}
+              className="border-4 border-gray-500 w-[200px] h-[50px]"
+            >
               削除する
             </button>
           </div>
