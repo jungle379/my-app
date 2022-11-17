@@ -8,6 +8,7 @@ const Home: NextPage = () => {
   const [data, toggleData] = useAtom(toggleDatasAtom);
   const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
     console.log(e);
+    alert("機能未実装です！");
   };
   return (
     <>
