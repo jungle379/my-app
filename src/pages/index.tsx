@@ -2,14 +2,15 @@ import { useAtom } from "jotai";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import toast, { Toaster } from "react-hot-toast";
 import { toggleDatasAtom } from "../state/todo";
 
 const Home: NextPage = () => {
   const [data, toggleData] = useAtom(toggleDatasAtom);
-  const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
-    console.log(e);
-    alert("機能未実装です！");
+  const clickHandler = () => {
+    toast.error("機能未実装です！！");
   };
+
   return (
     <>
       <Head>
@@ -47,6 +48,7 @@ const Home: NextPage = () => {
             >
               削除する
             </button>
+            <Toaster />
           </div>
         </div>
       </div>
