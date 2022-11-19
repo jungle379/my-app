@@ -4,7 +4,6 @@ import { selectAtom } from "jotai/utils";
 
 export const datasAtom = atom<Data[]>([
   { id: 1, title: "sample1", text: "foo", isDone: false, day: "", url: "" },
-  { id: 2, title: "sample2", text: "bar", isDone: false, day: "", url: "" },
 ]);
 
 export const datasLengthAtom = selectAtom(datasAtom, (datas) => datas.length);
@@ -39,3 +38,15 @@ export const addDatasAtom = atom<
   const newDatas = [...prevDatas, newData];
   set(datasAtom, newDatas);
 });
+
+// export const deleteDatasAtom = atom<null, Pick<Data, "id">>(
+//   null,
+//   (get, set) => {
+//     const prevDatas2 = get(datasAtom);
+//     const newData2 = {
+//       id: prevDatas2.length - 1,
+//     };
+//     const newDatas2 = [...prevDatas2, newData2];
+//     set(datasAtom, newDatas2);
+//   }
+// );

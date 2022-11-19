@@ -9,6 +9,9 @@ const Home: NextPage = () => {
   const [data, toggleData] = useAtom(toggleDatasAtom);
   const clickHandler = () => {
     toast.error("機能未実装です！！");
+    // if(data.isDone === true) {
+    //   return data,
+    // }
   };
 
   return (
@@ -16,7 +19,7 @@ const Home: NextPage = () => {
       <Head>
         <title>ホームページ</title>
       </Head>
-      <div className="flex justify-between">
+      <div className="flex justify-between h-[300px]">
         <div>
           <div>
             <h1>投稿一覧</h1>

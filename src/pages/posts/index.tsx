@@ -78,7 +78,7 @@ const Post: NextPage = () => {
               投稿する
             </button>
           </div>
-          <Toaster />
+          <Toaster position="bottom-right" reverseOrder={false} />
         </form>
       </div>
     </>
