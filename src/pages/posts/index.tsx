@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { ComponentProps } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { addDatasAtom } from "../../state/todo";
 
 const Post: NextPage = () => {
@@ -20,6 +21,7 @@ const Post: NextPage = () => {
       day,
       url,
     });
+    toast.success("投稿が完了しました");
     e.currentTarget.reset();
   };
 
@@ -76,6 +78,7 @@ const Post: NextPage = () => {
               投稿する
             </button>
           </div>
+          <Toaster />
         </form>
       </div>
     </>
