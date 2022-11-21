@@ -29,12 +29,11 @@ const Id: NextPage = () => {
       <div className="pb-10 border-b-4">
         {data.map((data) => (
           <div key={data.id}>
-            {/* <label> */}
             {`/posts/${data.id}` === router.asPath ? (
               <div>・{data.text}</div>
             ) : null}
             {`/posts/${data.id}` === router.asPath && !(data.day === "") ? (
-              <div className="font-bold">・投稿日時:{data.day}</div>
+              <div className="font-bold my-5">・投稿日時:{data.day}</div>
             ) : null}
             {`/posts/${data.id}` === router.asPath && !(data.url === "") ? (
               <div className="font-bold">
@@ -43,7 +42,6 @@ const Id: NextPage = () => {
                 </a>
               </div>
             ) : null}
-            {/* </label> */}
           </div>
         ))}
       </div>
