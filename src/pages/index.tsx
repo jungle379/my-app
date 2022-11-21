@@ -9,9 +9,6 @@ const Home: NextPage = () => {
   const [data, toggleData] = useAtom(toggleDatasAtom);
   const clickHandler = () => {
     toast.error("機能未実装です！！");
-    // if(data.isDone === true) {
-    //   return data,
-    // }
   };
 
   return (
