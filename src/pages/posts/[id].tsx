@@ -8,6 +8,7 @@ import { datasAtom } from "../../state/todo";
 const Id: NextPage = () => {
   const [data] = useAtom(datasAtom);
   const router = useRouter();
+
   return (
     <>
       <Head>
@@ -36,7 +37,7 @@ const Id: NextPage = () => {
               <div className="font-bold my-5">・投稿日時:{data.day}</div>
             ) : null}
             {`/posts/${data.id}` === router.asPath && !(data.url === "") ? (
-              <div className="font-bold my-5">
+              <div className="my-5">
                 <a href={data.url} target="_blank" rel="noopener noreferrer">
                   ・外部URL:{data.title}
                 </a>
