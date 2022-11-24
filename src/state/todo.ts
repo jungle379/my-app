@@ -8,7 +8,7 @@ export const datasAtom = atom<Data[]>([
     title: "sample1",
     text: "foo",
     isDone: false,
-    day: "",
+    day: "2022/1/1",
     url: "https://www.yahoo.co.jp/",
   },
   {
@@ -16,7 +16,7 @@ export const datasAtom = atom<Data[]>([
     title: "sample2",
     text: "bar",
     isDone: false,
-    day: "",
+    day: "2022/1/2",
     url: "https://www.youtube.com/",
   },
 ]);
