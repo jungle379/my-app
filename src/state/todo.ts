@@ -9,9 +9,16 @@ export const datasAtom = atom<Data[]>([
     text: "foo",
     isDone: false,
     day: "",
+    url: "https://www.yahoo.co.jp/",
+  },
+  {
+    id: 2,
+    title: "sample2",
+    text: "bar",
+    isDone: false,
+    day: "",
     url: "https://www.youtube.com/",
   },
-  { id: 2, title: "sample2", text: "bar", isDone: false, day: "", url: "" },
 ]);
 
 export const datasLengthAtom = selectAtom(datasAtom, (datas) => datas.length);
