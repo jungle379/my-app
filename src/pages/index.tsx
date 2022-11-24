@@ -3,12 +3,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import toast, { Toaster } from "react-hot-toast";
-import { toggleDatasAtom } from "../state/todo";
+import { addDatasAtom, toggleDatasAtom } from "../state/todo";
 
 const Home: NextPage = () => {
   const [data, toggleData] = useAtom(toggleDatasAtom);
+  const [_, addData] = useAtom(addDatasAtom);
   const clickHandler = () => {
-    toast.error("機能未実装です！！");
+    toast.success("投稿の削除に成功しました!!");
   };
 
   return (
