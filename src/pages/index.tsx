@@ -48,7 +48,7 @@ const Home: NextPage = () => {
             >
               削除する
             </button>
-            <Toaster />
+            <Toaster position="bottom-right" />
           </div>
         </div>
       </div>
