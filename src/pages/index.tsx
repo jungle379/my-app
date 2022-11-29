@@ -2,13 +2,24 @@ import { useAtom } from "jotai";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { ComponentProps } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { toggleDatasAtom } from "../state/todo";
+import { deleteDatasAtom, toggleDatasAtom } from "../state/todo";
 
 const Home: NextPage = () => {
   const [data, toggleData] = useAtom(toggleDatasAtom);
-  const clickHandler = () => {
-    toast.success("投稿の削除に成功しました!!");
+  const [_, addData] = useAtom(deleteDatasAtom);
+
+  const clickHandler: ComponentProps<"form">["onSubmit"] = (e) => {
+    // e.preventDefault();
+    // const id = e.currentTarget.bar.value;
+    // const isDone = e.currentTarget.baz.value;
+    // addData({
+    //   id,
+    //   isDone,
+    // });
+    toast.success("投稿の削除が完了しました!!");
+    return data;
   };
 
   return (
@@ -37,19 +48,18 @@ const Home: NextPage = () => {
             </div>
           ))}
         </div>
-        <div className="mx-10 my-10 text-20 text-center w-[150px] h-[40px] border-2 border-orange-500">
-          <div className="hover:underline">
+        <div className="mx-10 my-10 w-[350px] h-[40px]">
+          <div className="mx-10 text-20 text-center hover:underline w-[150px] border-2 border-orange-500">
             <Link href="../posts">投稿ページへ</Link>
           </div>
-          <div className="mt-40">
-            <button
-              onClick={clickHandler}
-              className="border-4 border-gray-500 w-[200px] h-[50px]"
-            >
-              削除する
-            </button>
-            <Toaster position="bottom-right" />
-          </div>
+          <form onSubmit={clickHandler}>
+            <div className="mt-40">
+              <button className="border-4 border-gray-500 w-[200px] h-[50px]">
+                削除する
+              </button>
+              <Toaster position="bottom-right" />
+            </div>
+          </form>
         </div>
       </div>
     </>
