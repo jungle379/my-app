@@ -54,7 +54,7 @@ export const addDatasAtom = atom<
   set(datasAtom, newDatas);
 });
 
-export const deleteDatasAtom = atom<null, Pick<Data, "id" | "isDone">>(
+export const deleteDatasAtom = atom<null, Pick<Data, "id">>(
   null,
   (get, set) => {
     const prevDatas2 = get(datasAtom);

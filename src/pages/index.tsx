@@ -11,15 +11,12 @@ const Home: NextPage = () => {
   const [_, addData] = useAtom(deleteDatasAtom);
 
   const clickHandler: ComponentProps<"form">["onSubmit"] = (e) => {
-    // e.preventDefault();
-    // const id = e.currentTarget.bar.value;
-    // const isDone = e.currentTarget.baz.value;
-    // addData({
-    //   id,
-    //   isDone,
-    // });
+    e.preventDefault();
+    const id = e.currentTarget.bar.value;
+    addData({
+      id,
+    });
     toast.success("投稿の削除が完了しました!!");
-    return data;
   };
 
   return (
@@ -54,7 +51,10 @@ const Home: NextPage = () => {
           </div>
           <form onSubmit={clickHandler}>
             <div className="mt-40">
-              <button className="border-4 border-gray-500 w-[200px] h-[50px]">
+              <button
+                name="bar"
+                className="border-4 border-gray-500 w-[200px] h-[50px]"
+              >
                 削除する
               </button>
               <Toaster position="bottom-right" />
