@@ -12,10 +12,10 @@ const Home: NextPage = () => {
 
   const clickHandler: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
-    // const id = e.currentTarget.bar.value;
-    // addData({
-    //   id,
-    // });
+    const id = e.currentTarget.bar.value;
+    addData({
+      id,
+    });
     toast.success("投稿の削除が完了しました!!");
   };
 
