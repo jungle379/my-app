@@ -53,20 +53,3 @@ export const addDatasAtom = atom<
   const newDatas = [...prevDatas, newData];
   set(datasAtom, newDatas);
 });
-
-// export const deleteDatasAtom = atom<null, Pick<Data, "id">>(
-//   null,
-//   (get, set) => {
-//     const prevDatas2 = get(datasAtom);
-//     const newData2 = {
-//       id: 0,
-//       title: "",
-//       text: "",
-//       url: "",
-//       isDone: false,
-//       day: "",
-//     };
-//     const newDatas2 = [...prevDatas2, newData2];
-//     set(datasAtom, newDatas2);
-//   }
-// );
