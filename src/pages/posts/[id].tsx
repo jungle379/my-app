@@ -39,7 +39,7 @@ const Id: NextPage = () => {
             {`/posts/${data.id}` === router.asPath && !(data.url === "") ? (
               <div className="my-5 font-bold hover:underline">
                 <a href={data.url} target="_blank" rel="noopener noreferrer">
-                  {data.title}のHPへ
+                  ・{data.title}のHPへ
                 </a>
               </div>
             ) : null}
