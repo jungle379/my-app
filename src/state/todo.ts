@@ -19,6 +19,14 @@ export const datasAtom = atom<Data[]>([
     day: "2022/1/2",
     url: "https://www.youtube.com/",
   },
+  {
+    id: 3,
+    title: "sample3",
+    text: "baz",
+    isDone: false,
+    day: "2022/1/3",
+    url: "https://www.youtube.com/",
+  },
 ]);
 
 export const datasLengthAtom = selectAtom(datasAtom, (datas) => datas.length);
